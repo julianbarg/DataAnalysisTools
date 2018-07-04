@@ -2,6 +2,7 @@
 #'
 #' @param df A dataframe
 #' @return A dataframe with multiple rows of statistics on the input dataframe \code{x}
+#' @export
 
 build_NA <- function(df){
   name <- deparse(substitute(df))
