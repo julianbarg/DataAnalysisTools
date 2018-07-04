@@ -15,6 +15,3 @@ A dataframe with multiple rows of statistics on the input dataframe \code{x}
 \description{
 Provide some NA statistics
 }
-\examples{
-
-}
