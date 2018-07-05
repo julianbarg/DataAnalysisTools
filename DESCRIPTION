@@ -2,7 +2,7 @@ Package: DataAnalysisTools
 Title: Basic Data Analysis Tools
 Version: 0.0.0.9000
 Authors@R: person("Julian", "Barg", email = "barg.julian@gmail.com", role = c("aut", "cre"))
-Description: Right now, one function: get NAs.
+Description: Simple, convenient, but ultimatively very basic data analysis tools for day-to-day use. Mostly to get a first look of data attributes. 
 Depends: R (>= 3.5.0)
 License: GPL-3 + file LICENSE
 Encoding: UTF-8
