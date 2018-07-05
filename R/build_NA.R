@@ -1,7 +1,7 @@
-#' Provide some NA statistics
+#' Provide statistics on misssing data in dataframes.
 #'
-#' @param df A dataframe
-#' @return A dataframe with multiple rows of statistics on the input dataframe \code{x}
+#' @param df Any non-empty dataframe.
+#' @return A dataframe with multiple rows of statistics on the input dataframe. The layout is such that mutliple of the returned dataframes can be concatenated to give a quick overview over the missing data in multiple dataframes. Function returns name of the dataframe, and for each variable (column) the number of NAs, total number of observations (rows), and percentage of missing data. Missing data must be formated to R NA values.  \code{x}
 #' @export
 
 build_NA <- function(df){
