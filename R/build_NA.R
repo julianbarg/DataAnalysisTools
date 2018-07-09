@@ -1,4 +1,4 @@
-#' Provide statistics on misssing data in dataframes.
+#' Provide statistics on missing data in dataframes.
 #'
 #' @param x Any onempty data.frame.
 #' @return A dataframe with multiple rows of statistics on the input dataframe. The output is designed so that that mutliple of the returned dataframes can be concatenated to give a quick overview over the missing data in multiple dataframes. Function returns name of the dataframe, and for each variable (column) the number of NAs, total number of observations (rows), and percentage of missing data. Missing data must be formated to R NA values.  \code{x}
