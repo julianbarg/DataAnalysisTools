@@ -15,3 +15,8 @@ A dataframe with multiple rows of statistics on the input dataframe. The output 
 \description{
 Provide statistics on misssing data in dataframes.
 }
+\examples{
+#' NA1 <- build_NA(mtcars)
+#' NA2 <- build_NA(cars)
+#' NA_statistics <- rbind(NA1, NA2)
+}
