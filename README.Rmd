@@ -31,8 +31,12 @@ devtools::install_github("julianbarg/DataAnalysisTools")
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+The functions in DataAnalysisTools cover everyday tasks carried out by data scientists and provide for easy-to-read code from the get-go.
 
 ```{r example}
-## basic example code
+build_NA <- DataAnalysisTools::build_NA
+NA1 <- build_NA(mtcars)
+NA2 <- build_NA(cars)
+NA_statistics <- rbind(NA1, NA2)
+NA_statistics
 ```
