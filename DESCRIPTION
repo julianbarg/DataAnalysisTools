@@ -1,10 +1,13 @@
 Package: DataAnalysisTools
 Title: Basic Data Analysis Tools
 Version: 0.0.0.9000
+Date: 2018-07-09
 Authors@R: person("Julian", "Barg", email = "barg.julian@gmail.com", role = c("aut", "cre"))
-Description: Simple, convenient, but ultimatively very basic data analysis tools for day-to-day use. Mostly to get a first look of data attributes. 
+Description: Convenient and simple data analysis tools for day-to-day use. Mostly to get a first look at data attributes. Output is usually structured to allow for rowbinding, to allow for comparison of different data sets or subsets/versions. 
 Depends: R (>= 3.5.0)
 License: GPL-3 + file LICENSE
+URL: https://www.r-project.org, https://github.com/julianbarg/DataAnalysisTools
+BugReports: https://github.com/julianbarg/DataAnalysisTools/issues
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 6.0.1
