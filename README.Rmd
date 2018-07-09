@@ -1,5 +1,5 @@
 ---
-output: github_document
+output: md_document
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
@@ -14,7 +14,7 @@ knitr::opts_chunk$set(
 
 # DataAnalysisTools
 
-[![Travis-CI Build Status](https://travis-ci.org/julianbarg/DataAnalysisTools.png?branch=master)](https://travis-ci.org/julianbarg/DataAnalysisTools)
+[![Travis-CI Build Sta3tus](https://travis-ci.org/julianbarg/DataAnalysisTools.png?branch=master)](https://travis-ci.org/julianbarg/DataAnalysisTools)
 
 [![Coverage Status](https://coveralls.io/repos/github/julianbarg/DataAnalysisTools/badge.svg?branch=master&service=github)](https://coveralls.io/github/julianbarg/DataAnalysisTools?branch=master)
 
