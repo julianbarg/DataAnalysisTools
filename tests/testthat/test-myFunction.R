@@ -15,5 +15,8 @@ build_NA(m)
 atomic <- 5
 build_NA(atomic)
 
+atomic2 <- TRUE
+build_NA(atomic2)
+
 N <- NA
 build_NA(N)
