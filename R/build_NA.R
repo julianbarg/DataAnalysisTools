@@ -3,6 +3,10 @@
 #' @param x Any onempty data.frame.
 #' @return A dataframe with multiple rows of statistics on the input dataframe. The output is designed so that that mutliple of the returned dataframes can be concatenated to give a quick overview over the missing data in multiple dataframes. Function returns name of the dataframe, and for each variable (column) the number of NAs, total number of observations (rows), and percentage of missing data. Missing data must be formated to R NA values.  \code{x}
 #' @export
+#' @examples 
+#' #' NA1 <- build_NA(mtcars)
+#' #' NA2 <- build_NA(cars)
+#' #' NA_statistics <- rbind(NA1, NA2)
 
 build_NA <- function(x) {
   ## First line is easy way to grab the name of the input, which we will denote
