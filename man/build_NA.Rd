@@ -7,16 +7,17 @@
 build_NA(x)
 }
 \arguments{
-\item{x}{Any onempty data.frame.}
+\item{x}{Any nonempty data.frame.}
 }
 \value{
-A dataframe with multiple rows of statistics on the input dataframe. The output is designed so that that mutliple of the returned dataframes can be concatenated to give a quick overview over the missing data in multiple dataframes. Function returns name of the dataframe, and for each variable (column) the number of NAs, total number of observations (rows), and percentage of missing data. Missing data must be formated to R NA values.  \code{x}
+A dataframe with origin of data, number of NAs, number of observations, and % missing data of \code{x}. The output is designed so that that mutliple of the returned dataframes can be concatenated to give a quick overview over the missing data in multiple dataframes. Function returns name of the dataframe, and for each variable (column) the number of NAs, total number of observations (rows), and percentage of missing data. Missing data must be formated to R NA values.
 }
 \description{
 Provide statistics on missing data in dataframes.
 }
 \examples{
-#' NA1 <- build_NA(mtcars)
-#' NA2 <- build_NA(cars)
-#' NA_statistics <- rbind(NA1, NA2)
+NA1 <- build_NA(mtcars)
+NA2 <- build_NA(cars)
+NA_statistics <- rbind(NA1, NA2)
+NA_statistics
 }
