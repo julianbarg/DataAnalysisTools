@@ -20,3 +20,6 @@ build_NA(atomic2)
 
 N <- NA
 build_NA(N)
+
+testfunction <- function(x) (x * 2)
+build_NA(testfunction)
