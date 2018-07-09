@@ -32,7 +32,7 @@ build_NA <- function(x) {
   ## generates warning.
   if (!is.data.frame(x)) {
     if (is.vector(x) | is.factor(x) | is.list(x)) {
-      warning("Input must data.frame. Output might not be meaningful.")
+      warning("Input must be data.frame. Output might not be meaningful.")
       output[1, ] <- NA
       output$source <- input_name
       output$variable <- input_name
@@ -42,7 +42,7 @@ build_NA <- function(x) {
     }
   
     else if (is.matrix(x)) {
-      warning("Input must data.frame. Output might not be meaningful.")
+      warning("Input must be data.frame. Output might not be meaningful.")
       output[1:ncol(x), ] <- NA
       output$source <- input_name
       output$variable <- if (!is.null(rownames(x))) {
@@ -54,25 +54,6 @@ build_NA <- function(x) {
       output$observations <- nrow(x)
       output$perc_NA <- output$NAs / output$observations  
     }
-  
-    ## A matrix is also atomic. Matrix class is covered above. Therefore, we use
-    ## else if.
-    else if (is.atomic(x) & !is.null(x)) {
-      warning("Input must data.frame. Output might not be meaningful.")
-      output[1, ] <- NA
-      output$source <- input_name
-      output$variable <- input_name
-      output$NAs <- sum(is.na(x))
-      output$observations <- 1
-      output$perc_NA <- output$NAs / output$observations
-    }
-  
-    ## For other cases, throw meaningful warning and return empty output. Function
-    ## already provided a more specific warning for empty data.frame as input.
-    else {
-      warning("Input must be of type data.frame. Output is empty.")
-    }
-  }
-  
+
   output
 }
