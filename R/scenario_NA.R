@@ -8,9 +8,8 @@
 #' @exclude
 #' @return A dataframe with origin of data, number of NAs, number of observations, and % missing data for each group (as specified in \code{index}) in \code{x}. The output is designed so that that mutliple of the returned dataframes can be concatenated to give a quick overview over the missing data in multiple dataframes. Function returns name of the dataframe, and for each variable (column) the number of NAs, total number of observations (rows), and percentage of missing data. Missing data must be formated to R NA values.
 #' @examples
-#' cars <- mtcars
-#' cars$gear <- as.factor(cars$gear)
-#' scenario_NA(cars, gear, exclude = TRUE, drop = 5, ad_stat = sd)
+#' mtcars$gear <- as.factor(mtcars$gear)
+#' scenario_NA(mtcars, gear, exclude = TRUE, drop = 5, ad_stat = sd)
 
 # scenario_NA(x, index, exclude = FALSE, drop, add_stat){
 #   output
