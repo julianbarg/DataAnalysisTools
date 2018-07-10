@@ -10,9 +10,9 @@
 #' @return Returns the dataframe with the new column included.
 #' @export
 #' @examples
-#' aggregate_columns(mtcars, c("vs", "cyl", "mpg"), colname = "meaningless_mean", mode = "mean")
+#' aggregate_columns(mtcars, c("vs", "cyl", "mpg"), "meaningless_mean", mode = "mean")
 
-aggregate_columns <- function(x, columns, colname, mode = "sum", delete = FALSE) {
+aggregate_columns <- function(x, columns, new_colname, mode = "sum", delete = FALSE) {
   if (mode == "sum") {
     aggregate <- function(y) (rowSums(y))
   } else if (mode == "mean") {
@@ -20,7 +20,7 @@ aggregate_columns <- function(x, columns, colname, mode = "sum", delete = FALSE)
   } else {
     stop("mode must be \"sum\" or\"mean\".")
   }
-  x[colname] <- aggregate(x[,colnames(x) %in% columns])
+  x[new_colname] <- aggregate(x[,colnames(x) %in% columns])
   if (delete == TRUE) {
     x <- x[,!colnames(x) %in% columns]
   }

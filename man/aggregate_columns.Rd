@@ -4,18 +4,18 @@
 \alias{aggregate_columns}
 \title{Aggregate multiple rows into one.}
 \usage{
-aggregate_columns(x, columns, colname, mode = "sum", delete = FALSE)
+aggregate_columns(x, columns, new_colname, mode = "sum", delete = FALSE)
 }
 \arguments{
 \item{x}{Any nonempty dataframe.}
 
 \item{columns}{Names of the columns to be aggregated.}
 
+\item{new_colname}{How to name the new columns}
+
 \item{mode}{Choose "sum" to take sum, or "mean" to take the mean.}
 
 \item{delete}{Choose TRUE to drop the original rows from the dataframe, or TRUE to retain them.}
-
-\item{new_colname}{How to name the new columns}
 }
 \value{
 Returns the dataframe with the new column included.
@@ -24,5 +24,5 @@ Returns the dataframe with the new column included.
 Multiple columns are added together, or the mean is taken to create a new columns. Used can also choose to delete the original columns.
 }
 \examples{
-aggregate_columns(mtcars, c("vs", "cyl", "mpg"), colname = "meaningless_mean", mode = "mean")
+aggregate_columns(mtcars, c("vs", "cyl", "mpg"), "meaningless_mean", mode = "mean")
 }
