@@ -6,7 +6,7 @@
 #' @param columns Names of the columns to be aggregated.
 #' @param new_colname How to name the new columns
 #' @param mode Choose "sum" to take sum, or "mean" to take the mean.
-#' @param delete Choose TRUE to drop the original rows from the dataframe, or TRUE to retain them.
+#' @param delete Choose TRUE to drop the original rows from the dataframe, or FALSE to retain them.
 #' @return Returns the dataframe with the new column included.
 #' @export
 #' @examples
