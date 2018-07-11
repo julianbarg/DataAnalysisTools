@@ -15,7 +15,7 @@ aggregate_columns(x, columns, new_colname, mode = "sum", delete = FALSE)
 
 \item{mode}{Choose "sum" to take sum, or "mean" to take the mean.}
 
-\item{delete}{Choose TRUE to drop the original rows from the dataframe, or TRUE to retain them.}
+\item{delete}{Choose TRUE to drop the original rows from the dataframe, or FALSE to retain them.}
 }
 \value{
 Returns the dataframe with the new column included.

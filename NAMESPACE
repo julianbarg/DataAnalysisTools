@@ -2,3 +2,4 @@
 
 export(aggregate_columns)
 export(build_NA)
+export(delete_entries_containing)
