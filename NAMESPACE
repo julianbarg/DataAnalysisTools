@@ -3,3 +3,8 @@
 export(aggregate_columns)
 export(build_NA)
 export(delete_entries_containing)
+export(plot_bars)
+export(plot_dist)
+export(plot_hist)
+export(plot_hist_dens)
+import(ggplot2)
