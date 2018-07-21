@@ -1,0 +1,1 @@
+aggregate_columns(mtcars, c("vs", "cyl", "mpg"), "meaningless_mean", mode = "mean")

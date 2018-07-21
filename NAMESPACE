@@ -3,6 +3,7 @@
 export(aggregate_columns)
 export(build_NA)
 export(delete_entries_containing)
+export(plot_2density)
 export(plot_bars)
 export(plot_dist)
 export(plot_hist)

@@ -1,4 +1,4 @@
-#' Aggregate multiple rows into one.
+#' Aggregate multiple columns into one.
 #' 
 #' Multiple columns are added together, or the mean is taken to create a new columns. Used can also choose to delete the original columns.
 #'

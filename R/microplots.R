@@ -108,3 +108,33 @@ plot_hist_dens = function(df, numcols = colnames(df), bins = 10){
     }
   }
 }
+
+#' 2d density plot
+#' 
+#' Creates a 2d density plot of the selected variables.
+#'
+#' @references https://www.edx.org/course/principles-of-machine-learning-r-edition
+#' @param df Any non-empty dataframe.
+#' @param col_y Column with the variable to be put on the y-axis.
+#' @param cols A number of columns from the dataframe, for each of which a 2d density plot will be created. By default, will use all columns from the dataframe, except for the y-axis column.
+#' @param alpha Transparency.
+#' @import ggplot2
+#' @export
+#' @return Multiple 2d density plot, by default one for each column in the provided dataframe, with the selected y column on the y-axis.
+#' @examples
+#' plot_2density(mtcars, "qsec")
+
+plot_2density = function(df, col_y, cols = NULL, alpha = 0.2) {
+  if (missing(cols)) {
+    cols <- colnames(df)
+    cols <- cols[!cols %in% col_y]
+  }
+  options(repr.plot.width = 4, repr.plot.height = 3.5) # Set the initial plot area dimensions
+  for (col in cols) {
+    p = ggplot(df, aes_string(col, col_y)) + 
+      geom_density_2d() +
+      geom_point(alpha = alpha) +
+      ggtitle(paste('2-D density plot of', col_y, 'vs.', col))
+    print(p)
+  }
+}
