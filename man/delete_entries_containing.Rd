@@ -19,7 +19,7 @@ delete_entries_containing(x, string, delete = "columns", exclude = c())
 Returns the dataframe without all columns that contain the string.
 }
 \description{
-THe provided dataframe is returned with out any of the columns or rows that contain the specified string.
+The provided dataframe is returned with out any of the columns or rows that contain the specified string.
 }
 \examples{
 delete_entries_containing(mtcars, "a", exclude = "am")

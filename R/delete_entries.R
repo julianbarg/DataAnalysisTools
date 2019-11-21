@@ -1,6 +1,6 @@
 #' Delete columns or rows containing the provided string.
 #' 
-#' THe provided dataframe is returned with out any of the columns or rows that contain the specified string.
+#' The provided dataframe is returned with out any of the columns or rows that contain the specified string.
 #'
 #' @param x Any nonempty dataframe.
 #' @param string The string to be matched.

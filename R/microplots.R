@@ -94,6 +94,7 @@ plot_dist = function(df, numcols = colnames(df)){
 #' @return Will returned an overlayed combination of density plot and histogram for the columns in \code{df}, or those selected through the parameter \code{numcols}.
 #' @examples
 #' plot_hist_dens(cars)
+utils::globalVariables(c("..density.."))
 
 plot_hist_dens = function(df, numcols = colnames(df), bins = 10){
   options(repr.plot.width = 4, repr.plot.height = 3) # Set the initial plot area dimensions
