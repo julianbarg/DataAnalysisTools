@@ -25,6 +25,7 @@ plot_bars = function(df, numcols = colnames(df)){
 }
 
 
+
 #' Plot histogram
 #' 
 #' Returns a histogram for every numeric variable in the provided dataframe.
@@ -80,7 +81,6 @@ plot_dist = function(df, numcols = colnames(df)){
 
 
 
-
 #' Plot histogram and kernel density estimation
 #' 
 #' A combination of \link[DataAnalysisTools]{plot_hist} and \link[DataAnalysisTools]{plot_dist}.
@@ -94,9 +94,9 @@ plot_dist = function(df, numcols = colnames(df)){
 #' @return Will returned an overlayed combination of density plot and histogram for the columns in \code{df}, or those selected through the parameter \code{numcols}.
 #' @examples
 #' plot_hist_dens(cars)
-utils::globalVariables(c("..density.."))
 
 plot_hist_dens = function(df, numcols = colnames(df), bins = 10){
+  
   options(repr.plot.width = 4, repr.plot.height = 3) # Set the initial plot area dimensions
   for (col in numcols) {
     if (is.numeric(df[,col])) {
@@ -109,6 +109,8 @@ plot_hist_dens = function(df, numcols = colnames(df), bins = 10){
     }
   }
 }
+
+
 
 #' 2d density plot
 #' 
