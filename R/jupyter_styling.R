@@ -1,6 +1,6 @@
 #' Adjust print options for a dataframe in jupyter lab using kable.
 #'
-#' Workaround to allow using kable styling in jupyter lab.
+#' Workaround for using kable styling in jupyter lab.
 #'
 #' @param df The dataframe to print
 #' @param ... Arguments to be passed through to \link[kableExtra]{kable_styling}.

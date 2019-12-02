@@ -12,7 +12,7 @@ jupyter_styling(df, ...)
 \item{...}{Arguments to be passed through to \link[kableExtra]{kable_styling}.}
 }
 \description{
-Workaround to allow using kable styling in jupyter lab.
+Workaround for using kable styling in jupyter lab.
 }
 \examples{
 jupyter_styling(mtcars, font_size=14)
