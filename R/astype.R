@@ -2,7 +2,7 @@
 #' 
 #' For instance to allow to return an object of the same type as was provided.
 #'
-#' @param x Object to be converted.
+#' @param vector Object to be converted.
 #' @param type Type in string, e.g., "factor".
 #'
 #' @return Object x, converted to target type.
@@ -10,6 +10,7 @@
 #'
 #' @examples
 #' type <- "factor"
+#' as.type(mtcars$mpg, "character")
 as.type <- function(vector, type) {
   if (!(type %in% c("numeric", "factor", "character"))) return(vector)
   if (type == "numeric" & all(is.numeric(vector))) return(as.numeric(vector))

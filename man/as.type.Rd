@@ -7,9 +7,9 @@
 as.type(vector, type)
 }
 \arguments{
-\item{type}{Type in string, e.g., "factor".}
+\item{vector}{Object to be converted.}
 
-\item{x}{Object to be converted.}
+\item{type}{Type in string, e.g., "factor".}
 }
 \value{
 Object x, converted to target type.
@@ -19,4 +19,5 @@ For instance to allow to return an object of the same type as was provided.
 }
 \examples{
 type <- "factor"
+as.type(mtcars$mpg, "character")
 }
