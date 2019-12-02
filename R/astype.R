@@ -1,4 +1,6 @@
 #' Set column type as stored in variable
+#' 
+#' For instance to allow to return an object of the same type as was provided.
 #'
 #' @param x Object to be converted.
 #' @param type Type in string, e.g., "factor".
@@ -8,8 +10,10 @@
 #'
 #' @examples
 #' type <- "factor"
-as.type <- function(x, type) {
-  if (type == "numeric") return(as.numeric(x))
-  if (type == "factor") return(as.factor(x))
-  if (type == "character") return(as.character(x))
+as.type <- function(vector, type) {
+  if (!(type %in% c("numeric", "factor", "character"))) return(vector)
+  if (type == "numeric" & all(is.numeric(vector))) return(as.numeric(vector))
+  if (type == "factor") return(as.factor(vector))
+  if (type == "character") return(as.character(vector))
+  return(vector)
 }

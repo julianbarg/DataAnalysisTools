@@ -4,18 +4,18 @@
 \alias{as.type}
 \title{Set column type as stored in variable}
 \usage{
-as.type(x, type)
+as.type(vector, type)
 }
 \arguments{
-\item{x}{Object to be converted.}
-
 \item{type}{Type in string, e.g., "factor".}
+
+\item{x}{Object to be converted.}
 }
 \value{
 Object x, converted to target type.
 }
 \description{
-Set column type as stored in variable
+For instance to allow to return an object of the same type as was provided.
 }
 \examples{
 type <- "factor"
