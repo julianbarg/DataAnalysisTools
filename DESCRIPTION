@@ -1,6 +1,6 @@
 Package: DataAnalysisTools
 Title: Basic Data Analysis Tools
-Version: 0.0.0.9904
+Version: 0.0.0.9905
 Date: 2018-07-09
 Authors@R: person("Julian", "Barg", email = "barg.julian@gmail.com", role = c("aut", "cre"))
 Description: Convenient and simple data analysis tools for day-to-day use. Mostly to get a first look at data attributes. Output is usually structured to allow for rowbinding, to allow for comparison of different data sets or subsets/versions. 
