@@ -36,7 +36,7 @@ consolidate <- function(df, summary_parsing, ..., by_cols = NA) {
 #' @examples
 #' consolidate_duplicates(mtcars, list(wt = rlang::quo(mean(wt))), hp)
 consolidate_duplicates <- function(df, summary_parsing, ..., by_cols = NA){
-  if (is.na(by_cols)) {by_cols <- rlang::enquos(...)}
+  if (all(is.na(by_cols))) {by_cols <- rlang::enquos(...)}
   
   duplicated <- duplicated(select(df, !!! by_cols), fromLast = T) | duplicated(select(df, !!! by_cols), fromLast = F)
   
