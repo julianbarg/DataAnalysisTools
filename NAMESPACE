@@ -3,6 +3,7 @@
 export(aggregate_columns)
 export(as.type)
 export(build_NA)
+export(consolidate)
 export(consolidate_duplicates)
 export(delete_entries_containing)
 export(jupyter_styling)

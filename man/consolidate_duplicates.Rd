@@ -2,7 +2,7 @@
 % Please edit documentation in R/consolidate_duplicates.R
 \name{consolidate_duplicates}
 \alias{consolidate_duplicates}
-\title{Utility function for consolidating duplicates.}
+\title{Consolidate duplicate entries}
 \usage{
 consolidate_duplicates(df, summary_parsing, ..., by_cols = NA)
 }
@@ -11,13 +11,15 @@ consolidate_duplicates(df, summary_parsing, ..., by_cols = NA)
 
 \item{summary_parsing}{Functions to apply in the summarize function.}
 
-\item{...}{Columns by which to group for summarize.}
+\item{...}{Columns by which to group for (summarize).}
 
-\item{by_cols}{Alternative argument to pass through the columns by which to group.}
+\item{by_cols}{Alternative argument to allow for passing through the columns by which to group.}
 }
 \description{
-Utility function for consolidating duplicates.
+Consolidates the columns for which there are summary functions provided. 
+For columns without summary functions, non-duplicated entries retain their 
+original value, and duplicated entries return NA.
 }
 \examples{
-consolidate_duplicates(mtcars, list(mean_hp = rlang::quo(mean(hp))), cyl)
+consolidate_duplicates(mtcars, list(wt = rlang::quo(mean(wt))), hp)
 }
