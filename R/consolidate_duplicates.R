@@ -12,7 +12,7 @@
 #' @examples
 #' consolidate_duplicates(mtcars, list(mean_hp = rlang::quo(mean(hp))), cyl)
 consolidate <- function(df, summary_parsing, ..., by_cols = NA) {
-  if (is.na(by_cols)) {by_cols <- rlang::enquos(...)}
+  if (all(is.na(by_cols))) {by_cols <- rlang::enquos(...)}
   
   df %>%
     group_by(!!! by_cols) %>%
