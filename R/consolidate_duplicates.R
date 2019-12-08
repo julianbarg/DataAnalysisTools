@@ -38,11 +38,11 @@ consolidate <- function(df, summary_parsing, ..., by_cols = NA) {
 consolidate_duplicates <- function(df, summary_parsing, ..., by_cols = NA){
   if (all(is.na(by_cols))) {by_cols <- rlang::enquos(...)}
   
-  duplicated <- duplicated(select(df, !!! by_cols), fromLast = T) | duplicated(select(df, !!! by_cols), fromLast = F)
+  duplicates <- duplicated(select(df, !!! by_cols), fromLast = T) | duplicated(select(df, !!! by_cols), fromLast = F)
   
-  df_duplicates <- consolidate(df[duplicated, ], summary_parsing = summary_parsing, by_cols = by_cols)
+  df_duplicates <- consolidate(df[duplicates, ], summary_parsing = summary_parsing, by_cols = by_cols)
   
-  df <- df[!duplicated, ] %>%
+  df <- df[!duplicates, ] %>%
     bind_rows(df_duplicates)
   return(df)
 }
