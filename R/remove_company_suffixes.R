@@ -10,7 +10,7 @@
 #' remove_company_suffixes(c("Enterprise Products Operating LLC", "Mercedes-Benz AG"))
 remove_company_suffixes <- function(string) {
   company_suffixes <- c("LLC", "AG", "A.G.", "L.P.", "LP", "CORP", "CO", "INC.", "CO.", 
-                        "INC", "L.L.C.", "THE", "L.P", "LLP", "LLC.", "II", "L. P.")
+                        "INC", "L.L.C.", "THE", "L.P", "LLP", "LLC.", "II", "L. P.", "LC")
   
   company_suffixes <- c(stringr::str_to_upper(company_suffixes), 
                         stringr::str_to_lower(company_suffixes), 
